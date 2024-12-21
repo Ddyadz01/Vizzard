@@ -167,6 +167,13 @@
   .song--item {
     padding: 3px 12px;
     min-width: 100%;
+    &__left {
+      .song--index {
+        span {
+          display: none;
+        }
+      }
+    }
     &__center,
     &__time {
       display: none;

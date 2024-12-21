@@ -1,5 +1,6 @@
 .heading {
   animation: animate 0.5s;
+  margin-bottom: 30px;
 }
 
 @keyframes animate {
@@ -10,5 +11,11 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .heading {
+    padding: 0 12px;
   }
 }
