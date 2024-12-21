@@ -179,3 +179,23 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 500px) {
+  .player {
+    padding: 20px 2px;
+    &--left {
+      margin-left: 0;
+      p {
+        font-size: 12px;
+      }
+      &_artist {
+        margin-left: 8px;
+      }
+    }
+    &--right {
+      .player--time {
+        display: none;
+      }
+    }
+  }
+}

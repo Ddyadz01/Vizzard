@@ -44,3 +44,11 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .top-navigation {
+    &--right {
+      display: none;
+    }
+  }
+}

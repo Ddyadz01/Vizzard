@@ -162,3 +162,14 @@
     opacity: 0;
   }
 }
+
+@media (max-width: 500px) {
+  .song--item {
+    padding: 3px 12px;
+    min-width: 100%;
+    &__center,
+    &__time {
+      display: none;
+    }
+  }
+}

@@ -45,3 +45,10 @@ body::-webkit-scrollbar-thumb {
   background-color: red;
   width: 500px;
 }
+
+@media (max-width: 500px) {
+  .app-element.content {
+    padding: 14px;
+    min-width: 100%;
+  }
+}
