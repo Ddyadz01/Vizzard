@@ -10,7 +10,7 @@ import BackwardIcon from '/public/icons/backward.svg?react';
 
 import style from './player.module.scss';
 
-const Player = () => {
+const Player = ({ isPlayerShow }) => {
   const audioRef = useRef();
 
   const { activeAudio } = useAudioStore((state) => state);
@@ -22,7 +22,7 @@ const Player = () => {
 
   return (
     activeAudio.audioUrl && (
-      <div className={style['player']}>
+      <div className={`${style['player']} ${isPlayerShow ? style['player'] : style['hidden']}`}>
         <audio ref={audioRef} src={activeAudio.audioUrl}></audio>
         <div className={style['progress']}>
           <div className={style['progress--bar']} style={{ width: `${progress + '%'}` }}></div>

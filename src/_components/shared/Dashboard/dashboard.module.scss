@@ -1,7 +1,6 @@
 .dashboard {
   background: var(--sidebar-background);
   padding: 20px 0;
-  // visibility: hidden;
   transition: 0.5s;
   width: 0;
   overflow: hidden;
@@ -67,14 +66,5 @@
   button {
     position: absolutes;
     right: 500px;
-  }
-}
-
-@keyframes animate {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
   }
 }

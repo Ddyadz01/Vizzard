@@ -13,16 +13,22 @@ import { useState } from 'react';
 
 function App() {
   const [isDashboard, setDashboard] = useState(true);
+  const [isPlayerShow, setPlayerShow] = useState(true);
   return (
     <div className="app">
       <Dashboard isDashboard={isDashboard} setDashboard={setDashboard} />
       <div className="app-element content">
-        <TopNavigation setDashboard={setDashboard} isDashboard={isDashboard} />
+        <TopNavigation
+          setDashboard={setDashboard}
+          isDashboard={isDashboard}
+          setPlayerShow={setPlayerShow}
+          isPlayerShow={isPlayerShow}
+        />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/discover" element={<Discover />} />
         </Routes>
-        <Player />
+        <Player isPlayerShow={isPlayerShow} />
       </div>
     </div>
   );

@@ -4,20 +4,15 @@
   align-items: center;
   justify-content: space-between;
   &--left {
-    .menu--btn {
+    display: flex;
+    align-items: center;
+    .menu--btn,
+    .player--toggle {
+      margin-right: 15px;
+      cursor: pointer;
       background-color: var(--sidebar-background);
       padding: 10px;
       border-radius: 8px;
-      svg {
-        transition: 0.3s;
-        stroke: var(--text-color-gray);
-      }
-      &:hover {
-        cursor: pointer;
-        svg {
-          stroke: var(--green-color);
-        }
-      }
     }
   }
   &--right {

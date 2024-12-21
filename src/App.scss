@@ -28,7 +28,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  min-height: 1500px;
+  // min-height: 1500px;
 }
 
 // .app-element {
@@ -38,7 +38,7 @@ body::-webkit-scrollbar-thumb {
 
 .app-element.content {
   width: 100%;
-  padding: 20px 20px 100px 20px;
+  padding: 20px;
 }
 
 .sidebar {
