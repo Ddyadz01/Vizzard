@@ -15,7 +15,10 @@ const Player = () => {
 
   const { activeAudio } = useAudioStore((state) => state);
 
-  const { handlePlay, isPlaying, progress } = usePlayer(audioRef, activeAudio);
+  const { handlePlay, isPlaying, progress, duration, currentTime } = usePlayer(
+    audioRef,
+    activeAudio,
+  );
 
   return (
     activeAudio.audioUrl && (
@@ -41,6 +44,7 @@ const Player = () => {
           <ForwardIcon onClick={() => (audioRef.current.currentTime += 5)} />
         </div>
         <div className={style['player--right']}>
+          <div className={style['player--time']}>{duration + ' / ' + currentTime}</div>
           <div
             className={`${style['player--animate']} ${
               isPlaying ? style['active'] : style['player--animate']

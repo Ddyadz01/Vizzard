@@ -8,12 +8,8 @@ import AlbumsIcon from '/public/icons/albums.svg?react';
 import PodcastIcon from '/public/icons/microphone.svg?react';
 
 import style from './dashboard.module.scss';
-import { useEffect } from 'react';
 
-const Dashboard = ({ isDashboard, setDashboard }) => {
-  useEffect(() => {
-    console.log(isDashboard);
-  }, [isDashboard]);
+const Dashboard = ({ isDashboard }) => {
   const { pathname } = useLocation();
   return (
     <div className={`${style['dashboard']} ${isDashboard ? style['active'] : style['dashboard']}`}>

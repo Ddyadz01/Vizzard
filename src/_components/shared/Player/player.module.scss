@@ -72,6 +72,12 @@
     display: flex;
     align-items: center;
     justify-content: right;
+    .player--time {
+      color: var(--text-color-gray);
+      font-weight: 400;
+      margin-right: 30px;
+      width: 140px;
+    }
     .player--animate {
       height: 35px;
       width: 35px;
