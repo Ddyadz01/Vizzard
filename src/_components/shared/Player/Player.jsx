@@ -34,22 +34,24 @@ const Player = () => {
         <div className={style['player--center']}>
           <BackwardIcon onClick={() => (audioRef.current.currentTime -= 5)} />
           {isPlaying ? (
-            <PauseCircleIcon onClick={() => handlePlay()} />
+            <PauseCircleIcon className={style['playing-btn']} onClick={() => handlePlay()} />
           ) : (
-            <PlayCircleIcon onClick={() => handlePlay()} />
+            <PlayCircleIcon className={style['playing-btn']} onClick={() => handlePlay()} />
           )}
           <ForwardIcon onClick={() => (audioRef.current.currentTime += 5)} />
         </div>
-        <div
-          className={`${style['player--right']} ${
-            isPlaying ? style['active'] : style['player--right']
-          }`}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+        <div className={style['player--right']}>
+          <div
+            className={`${style['player--animate']} ${
+              isPlaying ? style['active'] : style['player--animate']
+            }`}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     )

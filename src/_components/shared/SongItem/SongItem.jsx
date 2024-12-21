@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 import HeadphoneIcon from '/public/icons/headphone.svg?react';
 import HeartIcon from '/public/icons/heart-circle.svg?react';
 import MoreIcon from '/public/icons/more.svg?react';
