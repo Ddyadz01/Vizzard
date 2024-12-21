@@ -12,7 +12,7 @@ import './App.scss';
 import { useState } from 'react';
 
 function App() {
-  const [isDashboard, setDashboard] = useState(true);
+  const [isDashboard, setDashboard] = useState(false);
   const [isPlayerShow, setPlayerShow] = useState(true);
   return (
     <div className="app">
