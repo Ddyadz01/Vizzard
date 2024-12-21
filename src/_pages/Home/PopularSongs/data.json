@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "One Love",
+    "artist": "Sirius",
+    "label": "Street Stars",
+    "audioUrl": "/audio/Sirius-Nostalgia.mp3",
+    "countaAditions": "1225665445",
+    "imageUrl": "https://images.unsplash.com/photo-1525098507636-f48dc7917654?q=80&w=1993&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 2,
+    "title": "Old School",
+    "artist": "Sirius",
+    "label": "Street Stars",
+    "audioUrl": "/audio/Sirius-Old School.mp3",
+    "countaAditions": "1225665445",
+    "imageUrl": "https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 3,
+    "title": "Sugar",
+    "artist": "Zubi",
+    "label": "",
+    "audioUrl": "/audio/Zubi-Sugar.mp3",
+    "countaAditions": "1225665445",
+    "imageUrl": "https://avatars.mds.yandex.net/i?id=a88b0c24b9b2895e1a3407d4cb7d346090f1e9dd-4338366-images-thumbs&n=13"
+  }
+]

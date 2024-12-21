@@ -1,0 +1,80 @@
+.dashboard {
+  background: var(--sidebar-background);
+  padding: 20px 0;
+  // visibility: hidden;
+  transition: 0.5s;
+  width: 0;
+  overflow: hidden;
+  min-width: 0;
+  &.active {
+    min-width: 270px;
+    width: 270px;
+  }
+  &--logo {
+    padding: 0 20px;
+  }
+  &--nav {
+    width: 100%;
+    padding: 20px 0;
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      li {
+        display: inline-block;
+        a {
+          display: flex;
+          height: 48px;
+          padding-left: 20px;
+          align-items: center;
+          color: var(--text-color-gray);
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 22px;
+          svg {
+            margin-right: 10px;
+          }
+        }
+        a.active {
+          color: var(--text-color-white);
+          // transition: 0.3s;
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.06),
+            rgba(255, 255, 255, 0) 100%
+          );
+
+          position: relative;
+          & > svg > path {
+            fill: var(--green-color);
+            // transition: 0.3s;
+          }
+          &::before {
+            content: '';
+            display: block;
+            // transition: 0.3s;
+            position: absolute;
+            width: 6px;
+            border-radius: 3px 0 0 3px;
+            background-color: var(--green-color);
+            right: 0;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  button {
+    position: absolutes;
+    right: 500px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,47 @@
+@use './styles/reset';
+
+:root {
+  --background-color: rgb(18, 18, 18);
+  --sidebar-background: rgb(33, 33, 33);
+  --text-color-gray: rgb(148, 148, 148);
+  --text-color-white: rgb(255, 255, 255);
+  --green-color: rgb(29, 185, 84);
+  --player-bg: rgba(18, 18, 18, 0.64);
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--green-color);
+  border-radius: 8px;
+}
+
+.app {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 1500px;
+}
+
+// .app-element {
+//   width: 20%;
+//   // background-color: red;
+// }
+
+.app-element.content {
+  width: 100%;
+  padding: 20px 20px 100px 20px;
+}
+
+.sidebar {
+  background-color: red;
+  width: 500px;
+}

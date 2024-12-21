@@ -1,0 +1,141 @@
+.song--item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  // background-color: red;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 8px;
+  animation: animate 1s backwards;
+  background: none;
+
+  &.active {
+    position: relative;
+    background: linear-gradient(
+      70deg,
+      rgba(255, 255, 255, 0),
+      rgb(29 185 84 / 28%) 35.432%,
+      rgb(29 185 84 / 0%) 100%
+    );
+    &:hover {
+      background: linear-gradient(
+        70deg,
+        rgba(255, 255, 255, 0),
+        rgb(29 185 84 / 28%) 35.432%,
+        rgb(29 185 84 / 0%) 100%
+      );
+    }
+    .song--info {
+      p {
+        color: var(--green-color);
+      }
+    }
+    &::before {
+      content: '';
+      display: block;
+      transition: 0.3s;
+      position: absolute;
+      width: 6px;
+      border-radius: 3px 0 0 3px;
+      background-color: var(--green-color);
+      right: 0;
+      height: 100%;
+    }
+  }
+
+  &:hover {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.12) 35.432%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    .song--index {
+      display: flex;
+      align-items: center;
+      span.song--badge {
+        width: 15px;
+        height: 15px;
+        background: rgb(29, 185, 84);
+        background: radial-gradient(
+          circle,
+          rgba(29, 185, 84, 1) 0%,
+          rgba(29, 185, 84, 0.7791491596638656) 28%,
+          rgba(29, 185, 84, 0.3) 68%,
+          rgba(29, 185, 84, 0.1) 100%
+        );
+        border-radius: 50%;
+        position: absolute;
+        left: -10px;
+      }
+    }
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      margin-left: 15px;
+    }
+    .song--info {
+      margin-left: 15px;
+      min-width: 120px;
+      p {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      span {
+        font-size: 14px;
+        color: var(--text-color-gray);
+      }
+    }
+  }
+  &__center {
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-color-white);
+    svg {
+      margin-right: 5px;
+    }
+  }
+  &__right {
+    svg {
+      margin-left: 20px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      path {
+        transition: 0.3s;
+      }
+      &:hover {
+        path {
+          fill: var(--green-color) !important;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 100 {
+  .song--item {
+    &:nth-child(#{$i}) {
+      // Delay the animation. Delay increases as items loop.
+      animation-delay: $i * (0.05s);
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    // transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
