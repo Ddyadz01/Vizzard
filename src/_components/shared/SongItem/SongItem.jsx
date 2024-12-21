@@ -1,8 +1,11 @@
+import { useAudioStore } from '../../../store/store';
+
 import HeadphoneIcon from '/public/icons/headphone.svg?react';
 import HeartIcon from '/public/icons/heart-circle.svg?react';
 import MoreIcon from '/public/icons/more.svg?react';
+import TimeIcon from '/public/icons/time.svg?react';
+
 import style from './song-item.module.scss';
-import { useAudioStore } from '../../../store/store';
 
 const SongItem = ({ item }) => {
   const updateActiveAudio = useAudioStore((state) => state.updateActiveAudio);
@@ -26,6 +29,10 @@ const SongItem = ({ item }) => {
       <div className={style['song--item__center']}>
         <HeadphoneIcon />
         {item.countaAditions}
+      </div>
+      <div className={style['song--item__time']}>
+        <TimeIcon />
+        {item.duration}
       </div>
       <div className={style['song--item__right']}>
         <HeartIcon />
