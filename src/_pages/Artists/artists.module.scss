@@ -141,10 +141,8 @@
 }
 
 @media (max-width: 500px) {
-  .artists--page {
-    padding: 0 12px;
-  }
   .artists--content {
+    padding: 0 12px;
     .artist--item {
       margin-right: 0;
       .artist-image {
