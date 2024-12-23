@@ -6,6 +6,7 @@ import MoreIcon from '/public/icons/more.svg?react';
 import TimeIcon from '/public/icons/time.svg?react';
 
 import style from './song-item.module.scss';
+import { Link } from 'react-router';
 
 const SongItem = ({ item }) => {
   const updateActiveAudio = useAudioStore((state) => state.updateActiveAudio);
@@ -20,15 +21,19 @@ const SongItem = ({ item }) => {
           {id === item.id && <span className={style['song--badge']}></span>}
           {item.id}
         </div>
-        <img src={item.imageUrl} alt="" />
+        <div className={style['song--image']}>
+          <img src={item.imageUrl} alt="" />
+        </div>
         <div className={style['song--info']}>
           <p>{item.title}</p>
-          <span>{item.artist}</span>
+          <Link to={`/artist/${id}`}>
+            <span>{item.artist}</span>
+          </Link>
         </div>
       </div>
       <div className={style['song--item__center']}>
         <HeadphoneIcon />
-        {item.countaAditions}
+        {item.countAditions}
       </div>
       <div className={style['song--item__time']}>
         <TimeIcon />

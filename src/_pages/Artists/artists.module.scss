@@ -1,0 +1,141 @@
+.artists--page {
+  min-height: 100vh;
+  // background-image: url('https://i.pinimg.com/originals/0d/3e/48/0d3e488adc89c0b1a82d999813e276fb.png');
+  // background-size: 95px;
+}
+.artists--content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .artist--item {
+    margin-right: 20px;
+    margin-bottom: 40px;
+    animation: artistsCardAnimation 0.3s backwards;
+    background: #161616;
+    padding: 15px;
+    border-radius: 12px;
+    position: relative;
+
+    .artist-image {
+      width: 200px;
+      height: 200px;
+      align-items: center;
+      display: flex;
+      position: relative;
+      justify-content: center;
+      .music--vizualaizer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      img {
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+        transition: all 0.3s;
+      }
+      &_btn {
+        position: absolute;
+        backdrop-filter: blur(5px);
+        transition: 0.3s;
+        bottom: 5px;
+        right: 5px;
+        width: 40px;
+        height: 40px;
+        background-color: rgb(109 109 109 / 29%);
+        border-radius: 50%;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .button_text {
+          display: none;
+        }
+
+        svg {
+          width: 35px;
+          height: 35px;
+          path {
+            fill: var(--green-color) !important;
+          }
+        }
+      }
+    }
+    .artist-info {
+      h1,
+      p {
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+        margin-top: 10px;
+      }
+    }
+    &:hover {
+      .artist-image {
+        img {
+          transform: scale(0.8);
+          // border: 1px solid var(--green-color);
+          // box-shadow: 0 0 25px var(--green-color);
+        }
+        &_btn {
+          width: 50%;
+          border-radius: 8px;
+          cursor: pointer;
+          .button_text {
+            display: block;
+            h1 {
+              color: var(--green-color);
+              margin: 0;
+            }
+          }
+          svg {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes artistsCardAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animateIconPlay {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes animateButtonText {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+
+@for $i from 1 through 50 {
+  .artist--item {
+    &:nth-child(#{$i}) {
+      // Delay the animation. Delay increases as items loop.
+      animation-delay: $i * (0.03s);
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "popular": [
+    {
+      "id": 1,
+      "title": "One Love",
+      "artist": "Sirius",
+      "label": "Street Stars",
+      "artist_id": 1,
+      "duration": "04:14",
+      "audioUrl": "/audio/Sirius-Nostalgia.mp3",
+      "countAditions": "67K",
+      "imageUrl": "https://images.unsplash.com/photo-1525098507636-f48dc7917654?q=80&w=1993&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 2,
+      "title": "Old School",
+      "artist": "Sirius",
+      "label": "Street Stars",
+      "artist_id": 1,
+      "duration": "03:45",
+      "audioUrl": "/audio/Sirius-Old School.mp3",
+      "countAditions": "67K",
+      "imageUrl": "https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 3,
+      "title": "Sugar",
+      "artist": "Zubi",
+      "label": "",
+      "artist_id": 2,
+      "duration": "02:55",
+      "audioUrl": "/audio/Zubi-Sugar.mp3",
+      "countAditions": "67K",
+      "imageUrl": "https://avatars.mds.yandex.net/i?id=a88b0c24b9b2895e1a3407d4cb7d346090f1e9dd-4338366-images-thumbs&n=13"
+    }
+  ],
+  "artists": [
+    {
+      "id": 1,
+      "artist_name": "Sirius",
+      "artist_image_url": "https://avatars.yandex.net/get-music-content/4382806/112674f5.a.13545763-1/m1000x1000?webp=false",
+      "artist_label": "Street Stars",
+      "artist_albums": [
+        {
+          "id": 1,
+          "album_name": "2022",
+          "album_image_url": "https://avatars.mds.yandex.net/i?id=2bb3a6e87a13e09c0e7d4b9f6a58e9e1a124f250-4242799-images-thumbs&n=13"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "artist_name": "Zubi",
+      "artist_image_url": "https://i.scdn.co/image/ab67616d0000b273e921dfd4f46c2585eca012a3",
+      "artist_label": "",
+      "artist_albums": [
+        {
+          "id": 1,
+          "album_name": "2022",
+          "album_image_url": "https://avatars.mds.yandex.net/i?id=2bb3a6e87a13e09c0e7d4b9f6a58e9e1a124f250-4242799-images-thumbs&n=13"
+        }
+      ]
+    }
+  ]
+}

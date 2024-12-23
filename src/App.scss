@@ -11,6 +11,7 @@
 
 body {
   background-color: var(--background-color);
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -28,7 +29,8 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  // min-height: 1500px;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 // .app-element {

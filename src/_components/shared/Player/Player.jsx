@@ -9,6 +9,8 @@ import ForwardIcon from '/public/icons/forward.svg?react';
 import BackwardIcon from '/public/icons/backward.svg?react';
 
 import style from './player.module.scss';
+import MusicBadge from '../../ui/MusicBadge/MusicBadge';
+import { Link } from 'react-router';
 
 const Player = ({ isPlayerShow }) => {
   const audioRef = useRef();
@@ -31,7 +33,9 @@ const Player = ({ isPlayerShow }) => {
           <img src={activeAudio.imageUrl} alt="" />
           <div className={style['player--left_artist']}>
             <p>{activeAudio.title}</p>
-            <span>{activeAudio.artist}</span>
+            <Link to={`/artist/${activeAudio.artist_id}`}>
+              <span>{activeAudio.artist}</span>
+            </Link>
           </div>
         </div>
         <div className={style['player--center']}>
@@ -45,18 +49,8 @@ const Player = ({ isPlayerShow }) => {
         </div>
         <div className={style['player--right']}>
           <div className={style['player--time']}>{duration + ' / ' + currentTime}</div>
-          <div
-            className={`${style['player--animate']} ${
-              isPlaying ? style['active'] : style['player--animate']
-            }`}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
         </div>
+        <MusicBadge audioRef={audioRef} />
       </div>
     )
   );

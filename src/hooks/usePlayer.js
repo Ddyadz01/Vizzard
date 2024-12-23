@@ -1,20 +1,22 @@
 import { useEffect, useState } from 'react';
+import { useAudioStore } from '../store/store';
 
 export const usePlayer = (audioRef, activeAudio) => {
-  const [isPlaying, setPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
+
+  const { isPlaying, updatePlayingStatus } = useAudioStore((state) => state);
 
   const audio = audioRef?.current;
 
   const handlePlay = () => {
     if (!audio) return;
     if (isPlaying) {
-      setPlaying((prev) => !prev);
+      updatePlayingStatus(!isPlaying);
       audio.pause();
     } else {
-      setPlaying((prev) => !prev);
+      updatePlayingStatus(!isPlaying);
       audio.play();
     }
   };
@@ -39,7 +41,7 @@ export const usePlayer = (audioRef, activeAudio) => {
     const duration = audio.duration;
     if (currentTime == duration) {
       setProgress(0);
-      setPlaying((prev) => !prev);
+      updatePlayingStatus(!isPlaying);
     }
     setProgress((currentTime / duration) * 100);
     const minutes = Math.floor(currentTime / 60);
@@ -50,7 +52,7 @@ export const usePlayer = (audioRef, activeAudio) => {
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.play();
-      setPlaying(true);
+      updatePlayingStatus(true);
     }
   }, [activeAudio]);
 
