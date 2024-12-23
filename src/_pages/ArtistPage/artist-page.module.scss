@@ -1,0 +1,23 @@
+.artist--page {
+  h1 {
+    display: flex;
+    align-items: center;
+    p {
+      font-size: 14px;
+      margin: 0 30px;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        background-color: var(--green-color);
+        left: -15px;
+        top: 50%;
+      }
+    }
+  }
+}

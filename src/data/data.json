@@ -43,6 +43,17 @@
       "audioUrl": "/audio/Биг Сити Лайф.mp3",
       "countAditions": "67K",
       "imageUrl": "https://ruspublic.ru/music/authors/a.v.g._50.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Интервью",
+      "artist": "Janaga",
+      "label": "",
+      "artist_id": 4,
+      "duration": "02:05",
+      "audioUrl": "/audio/JANAGA-Интервью.mp3",
+      "countAditions": "67K",
+      "imageUrl": "https://sun6-21.userapi.com/impg/ODtFatHwerVqtFBc1mBluNOrvXfpctoNnChjGQ/c1hwxy2mkpk.jpg?size=640x640&quality=96&sign=4d91bfb36334b6cd0bf0ad4e4231a578&c_uniq_tag=qdGbmHE8VORNzd0nGyHW2MCm3O7AFWwZpjyPVfVJeKE&type=album"
     }
   ],
   "artists": [
@@ -76,6 +87,19 @@
       "id": 3,
       "artist_name": "A.V.G.",
       "artist_image_url": "https://musclub.ru/data/catalog/4/3/f/43f6ec07a1c6a9aa11ed0156f1d598da.jpeg",
+      "artist_label": "",
+      "artist_albums": [
+        {
+          "id": 1,
+          "album_name": "2022",
+          "album_image_url": "https://avatars.mds.yandex.net/i?id=2bb3a6e87a13e09c0e7d4b9f6a58e9e1a124f250-4242799-images-thumbs&n=13"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "artist_name": "Janaga",
+      "artist_image_url": "https://sun9-71.userapi.com/impg/El2ZS1IjrB8wUQ7-j7SW0E-_dm6UqsE_c20-7A/BQYd55rGaFU.jpg?size=500x500&quality=96&sign=e1280edd0e44d67e3622411842891253&type=album",
       "artist_label": "",
       "artist_albums": [
         {

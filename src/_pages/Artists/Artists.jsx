@@ -1,11 +1,15 @@
+import { Link } from 'react-router';
+
+import TitleComponent from '@components/ui/TitleComponent/TitleComponent';
+import MusicBadge from '@components/ui/MusicBadge/MusicBadge';
+
+import { useAudioStore } from '@store/store';
+
 import PlayCircleIcon from '/public/icons/play-circle.svg?react';
-import TitleComponent from '../../_components/ui/TitleComponent/TitleComponent';
 
 import { artists } from '../../data/data.json';
+
 import style from './artists.module.scss';
-import { useAudioStore } from '../../store/store';
-import MusicBadge from '../../_components/ui/MusicBadge/MusicBadge';
-import { Link } from 'react-router';
 const Artists = () => {
   const { activeAudio } = useAudioStore((state) => state);
 

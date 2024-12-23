@@ -1,12 +1,15 @@
+import { Link } from 'react-router';
+
+import { useAudioStore } from '@store/store';
+
 import { AudioLines, ChevronRight, Search } from 'lucide-react';
+
 import NotificationIcon from '/public/icons/notification.svg?react';
 import ArrowRightIcon from '/public/icons/arrow-circle-right.svg?react';
 import ArrowLeftIcon from '/public/icons/arrow-circle-left.svg?react';
-import style from './top-navigation.module.scss';
-import { useAudioStore } from './../../../store/store';
 import useBreadcrumbs from 'use-react-router-breadcrumbs';
-import { Link } from 'react-router';
 
+import style from './top-navigation.module.scss';
 const TopNavigation = ({ isDashboard, setDashboard, setPlayerShow, isPlayerShow }) => {
   const breadcrumbs = useBreadcrumbs();
   const { activeAudio } = useAudioStore((state) => state);

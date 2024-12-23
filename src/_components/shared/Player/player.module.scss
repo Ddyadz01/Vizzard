@@ -3,12 +3,11 @@
   background: var(--player-bg);
   width: 100%;
   left: 0;
-  height: 80px;
+  height: 121px;
   position: fixed;
   bottom: 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   transition: 0.3s;
   padding: 20px;
   animation: playerAnimation 0.3s;
@@ -27,6 +26,7 @@
     background: rgb(101, 101, 101);
     width: 100%;
     position: absolute;
+    cursor: pointer;
     height: 4px;
     top: 0;
     left: 0;
@@ -41,31 +41,46 @@
   audio {
     display: none;
   }
-  &--left {
+  .player--time {
     display: flex;
     align-items: center;
-    width: 33%;
-    animation: playerLeftAnimation 0.6s backwards;
-    animation-delay: 0.4s;
-    img {
-      width: 35px;
-      height: 35px;
-      border-radius: 4px;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+    p {
+      color: var(--text-color-gray);
+      font-weight: 400;
     }
-    &_artist {
-      margin-left: 20px;
-      p {
-        font-weight: bold;
-        color: var(--green-color);
+  }
+  .player--controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .player--left {
+      display: flex;
+      align-items: center;
+      animation: playerLeftAnimation 0.6s backwards;
+      animation-delay: 0.4s;
+      img {
+        width: 45px;
+        height: 45px;
+        border-radius: 4px;
       }
-      span {
-        font-size: 12px;
-        color: var(--text-color-gray);
+      &_artist {
+        margin-left: 20px;
+        p {
+          font-weight: bold;
+          color: var(--green-color);
+        }
+        span {
+          font-size: 12px;
+          color: var(--text-color-gray);
+        }
       }
     }
   }
+
   &--center {
-    width: 33%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,18 +98,36 @@
     }
   }
   &--right {
-    width: 33%;
-    position: relative;
     display: flex;
     align-items: center;
-    justify-content: right;
-    animation: playerRightAnimation 0.6s backwards;
-    animation-delay: 0.4s;
-    .player--time {
-      color: var(--text-color-gray);
-      font-weight: 400;
+    .player--volume {
       margin-right: 30px;
-      width: 140px;
+      display: flex;
+      align-items: center;
+      &:hover {
+        .volume--progress {
+          width: 60px;
+        }
+      }
+      .volume--progress {
+        width: 60px;
+        margin-left: 10px;
+        border-radius: 8px;
+        background-color: rgb(101, 101, 101);
+        height: 6px;
+        position: relative;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 0;
+        &__current {
+          position: absolute;
+          height: 6px;
+          width: 50%;
+          background-color: var(--green-color);
+          border-radius: 12px;
+          transition: 0.2s;
+        }
+      }
     }
   }
 }

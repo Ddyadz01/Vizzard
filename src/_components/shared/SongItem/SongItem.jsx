@@ -1,4 +1,6 @@
-import { useAudioStore } from '../../../store/store';
+import { useAudioStore } from '@store/store';
+
+import { Link } from 'react-router';
 
 import HeadphoneIcon from '/public/icons/headphone.svg?react';
 import HeartIcon from '/public/icons/heart-circle.svg?react';
@@ -6,7 +8,6 @@ import MoreIcon from '/public/icons/more.svg?react';
 import TimeIcon from '/public/icons/time.svg?react';
 
 import style from './song-item.module.scss';
-import { Link } from 'react-router';
 
 const SongItem = ({ item }) => {
   const updateActiveAudio = useAudioStore((state) => state.updateActiveAudio);

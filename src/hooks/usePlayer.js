@@ -5,6 +5,7 @@ export const usePlayer = (audioRef, activeAudio) => {
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
+  const [volume, setVolume] = useState(1);
 
   const { isPlaying, updatePlayingStatus } = useAudioStore((state) => state);
 
@@ -49,6 +50,32 @@ export const usePlayer = (audioRef, activeAudio) => {
     setCurrentTime('0' + minutes + `${seconds < 10 ? ':0' : ':'}` + seconds);
   };
 
+  const updateVolume = (e) => {
+    const progressBar = e.currentTarget;
+    const rect = progressBar.getBoundingClientRect();
+    const offsetX = e.clientX - rect.left;
+    const newVolume = offsetX / rect.width;
+    audio.volume = newVolume;
+    setVolume(newVolume);
+    // // e.stopPropagation();
+    // const clickPosition = e.nativeEvent.offsetX;
+    // const widthElement = e.target.clientWidth;
+    // const volumeValue = clickPosition / widthElement;
+    // audio.volume = volumeValue;
+    // console.log(widthElement, clickPosition);
+    // setVolume((clickPosition / widthElement) * 100);
+    // console.log((clickPosition / widthElement) * 100);
+  };
+
+  const updateProgressClick = (e) => {
+    const progressBar = e.currentTarget;
+    const clickPosition = e.clientX - progressBar.getBoundingClientRect().left;
+    const progressBarWidth = progressBar.offsetWidth;
+    const clickRatio = clickPosition / progressBarWidth;
+    const newTime = clickRatio * audio.duration;
+    audio.currentTime = newTime;
+  };
+
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.play();
@@ -62,5 +89,8 @@ export const usePlayer = (audioRef, activeAudio) => {
     handlePlay,
     duration,
     currentTime,
+    updateVolume,
+    volume,
+    updateProgressClick,
   };
 };
