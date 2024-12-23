@@ -139,3 +139,18 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .artists--page {
+    padding: 0 12px;
+  }
+  .artists--content {
+    .artist--item {
+      margin-right: 0;
+      .artist-image {
+        width: 154px;
+        height: 154px;
+      }
+    }
+  }
+}

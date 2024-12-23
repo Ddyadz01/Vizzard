@@ -32,6 +32,17 @@
       "audioUrl": "/audio/Zubi-Sugar.mp3",
       "countAditions": "67K",
       "imageUrl": "https://avatars.mds.yandex.net/i?id=a88b0c24b9b2895e1a3407d4cb7d346090f1e9dd-4338366-images-thumbs&n=13"
+    },
+    {
+      "id": 4,
+      "title": "Биг Сити Лайф",
+      "artist": "A.V.G.",
+      "label": "",
+      "artist_id": 3,
+      "duration": "01:45",
+      "audioUrl": "/audio/Биг Сити Лайф.mp3",
+      "countAditions": "67K",
+      "imageUrl": "https://ruspublic.ru/music/authors/a.v.g._50.jpeg"
     }
   ],
   "artists": [
@@ -52,6 +63,19 @@
       "id": 2,
       "artist_name": "Zubi",
       "artist_image_url": "https://i.scdn.co/image/ab67616d0000b273e921dfd4f46c2585eca012a3",
+      "artist_label": "",
+      "artist_albums": [
+        {
+          "id": 1,
+          "album_name": "2022",
+          "album_image_url": "https://avatars.mds.yandex.net/i?id=2bb3a6e87a13e09c0e7d4b9f6a58e9e1a124f250-4242799-images-thumbs&n=13"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "artist_name": "A.V.G.",
+      "artist_image_url": "https://musclub.ru/data/catalog/4/3/f/43f6ec07a1c6a9aa11ed0156f1d598da.jpeg",
       "artist_label": "",
       "artist_albums": [
         {

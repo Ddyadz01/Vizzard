@@ -28,7 +28,7 @@ const Artists = () => {
               <div className={style['music--vizualaizer']}>
                 {activeAudio.artist_id === artist.id && <MusicBadge />}
               </div>
-              <Link to={`/artist/${artist.id}`}>
+              <Link to={`/artists/${artist.id}`}>
                 <div className={style['artist-image_btn']}>
                   <PlayCircleIcon />
                   <div className={style['button_text']}>

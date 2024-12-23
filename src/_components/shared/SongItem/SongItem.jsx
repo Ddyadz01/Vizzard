@@ -26,7 +26,7 @@ const SongItem = ({ item }) => {
         </div>
         <div className={style['song--info']}>
           <p>{item.title}</p>
-          <Link to={`/artist/${id}`}>
+          <Link to={`/artists/${item.artist_id}`}>
             <span>{item.artist}</span>
           </Link>
         </div>

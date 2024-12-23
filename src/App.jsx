@@ -11,6 +11,7 @@ import Player from '@components/shared/Player/Player';
 import './App.scss';
 import { useState } from 'react';
 import ArtistPage from './_pages/ArtistPage/ArtistPage';
+import Albums from './_pages/Albums/Albums';
 
 function App() {
   const [isDashboard, setDashboard] = useState(false);
@@ -28,7 +29,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/artists" element={<Artists />} />
-          <Route path="/artist/:id" element={<ArtistPage />} />
+          <Route path="/artists/:id" element={<ArtistPage />} />
+          <Route exact path="/albums" element={<Albums />} />
         </Routes>
         <Player isPlayerShow={isPlayerShow} />
       </div>

@@ -33,7 +33,7 @@ const Player = ({ isPlayerShow }) => {
           <img src={activeAudio.imageUrl} alt="" />
           <div className={style['player--left_artist']}>
             <p>{activeAudio.title}</p>
-            <Link to={`/artist/${activeAudio.artist_id}`}>
+            <Link to={`/artists/${activeAudio.artist_id}`}>
               <span>{activeAudio.artist}</span>
             </Link>
           </div>

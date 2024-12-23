@@ -38,7 +38,7 @@ const Dashboard = ({ isDashboard }) => {
               </Link>
             </li>
             <li>
-              <Link>
+              <Link to="/albums" className={pathname === '/albums' ? style['active'] : ''}>
                 <AlbumsIcon />
                 Albums
               </Link>

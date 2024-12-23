@@ -6,6 +6,25 @@
   &--left {
     display: flex;
     align-items: center;
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      a {
+        align-items: center;
+        display: flex;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-color-gray);
+        svg {
+          stroke: var(--text-color-gray);
+          width: 20px;
+          height: 20px;
+        }
+      }
+      a.active {
+        color: var(--green-color);
+      }
+    }
     .menu--btn,
     .player--toggle {
       margin-right: 15px;
