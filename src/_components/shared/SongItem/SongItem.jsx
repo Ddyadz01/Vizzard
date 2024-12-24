@@ -8,6 +8,7 @@ import MoreIcon from '/public/icons/more.svg?react';
 import TimeIcon from '/public/icons/time.svg?react';
 
 import style from './song-item.module.scss';
+import MusicBadge from '../../ui/MusicBadge/MusicBadge';
 
 const SongItem = ({ item }) => {
   const updateActiveAudio = useAudioStore((state) => state.updateActiveAudio);
@@ -18,12 +19,13 @@ const SongItem = ({ item }) => {
       className={`${style['song--item']} ${item.id === id ? style['active'] : ''}`}
     >
       <div className={style['song--item__left']}>
-        <div className={style['song--index']}>
+        {/* <div className={style['song--index']}>
           {id === item.id && <span className={style['song--badge']}></span>}
           {item.id}
-        </div>
+        </div> */}
         <div className={style['song--image']}>
           <img src={item.imageUrl} alt="" />
+          <div className={style['song--image__badge']}>{item.id === id && <MusicBadge />}</div>
         </div>
         <div className={style['song--info']}>
           <p>{item.title}</p>

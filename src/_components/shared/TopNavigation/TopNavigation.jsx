@@ -10,6 +10,7 @@ import ArrowLeftIcon from '/public/icons/arrow-circle-left.svg?react';
 import useBreadcrumbs from 'use-react-router-breadcrumbs';
 
 import style from './top-navigation.module.scss';
+
 const TopNavigation = ({ isDashboard, setDashboard, setPlayerShow, isPlayerShow }) => {
   const breadcrumbs = useBreadcrumbs();
   const { activeAudio } = useAudioStore((state) => state);

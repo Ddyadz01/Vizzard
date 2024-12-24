@@ -3,8 +3,6 @@ import { useRef } from 'react';
 import { useAudioStore } from '@store/store';
 import { usePlayer } from '@hooks/usePlayer';
 
-import MusicBadge from '@components/ui/MusicBadge/MusicBadge';
-
 import { Link } from 'react-router';
 
 import { Volume1, Volume2 } from 'lucide-react';
@@ -75,7 +73,6 @@ const Player = ({ isPlayerShow }) => {
                 ></div>
               </div>
             </div>
-            <MusicBadge audioRef={audioRef} />
           </div>
         </div>
       </div>

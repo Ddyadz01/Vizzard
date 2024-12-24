@@ -23,7 +23,7 @@
     animation: playerAnimation 0.3s;
   }
   .progress {
-    background: rgb(101, 101, 101);
+    background: rgb(44 44 44);
     width: 100%;
     position: absolute;
     cursor: pointer;
@@ -101,7 +101,7 @@
     display: flex;
     align-items: center;
     .player--volume {
-      margin-right: 30px;
+      // margin-right: 30px;
       display: flex;
       align-items: center;
       &:hover {
@@ -113,7 +113,7 @@
         width: 60px;
         margin-left: 10px;
         border-radius: 8px;
-        background-color: rgb(101, 101, 101);
+        background-color: rgb(44 44 44);
         height: 6px;
         position: relative;
         cursor: pointer;

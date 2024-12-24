@@ -15,7 +15,6 @@ const MusicBadge = (audioRef) => {
       <span></span>
       <span></span>
       <span></span>
-      <span></span>
     </div>
   );
 };

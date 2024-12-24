@@ -12,6 +12,18 @@
 
   &.active {
     position: relative;
+    .song--image {
+      position: relative;
+      img {
+        filter: brightness(0.5);
+      }
+      .song--image__badge {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
     &:hover {
       background: linear-gradient(
         70deg,

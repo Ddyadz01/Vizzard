@@ -43,7 +43,7 @@ const Artists = () => {
             </div>
             <div className={style['artist-info']}>
               <TitleComponent size={'l'} content={artist.artist_name} />
-              <p>{artist.artist_label}</p>
+              {/* <p>{artist.artist_label}</p> */}
             </div>
           </div>
         ))}

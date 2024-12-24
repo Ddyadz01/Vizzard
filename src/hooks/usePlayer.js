@@ -57,14 +57,6 @@ export const usePlayer = (audioRef, activeAudio) => {
     const newVolume = offsetX / rect.width;
     audio.volume = newVolume;
     setVolume(newVolume);
-    // // e.stopPropagation();
-    // const clickPosition = e.nativeEvent.offsetX;
-    // const widthElement = e.target.clientWidth;
-    // const volumeValue = clickPosition / widthElement;
-    // audio.volume = volumeValue;
-    // console.log(widthElement, clickPosition);
-    // setVolume((clickPosition / widthElement) * 100);
-    // console.log((clickPosition / widthElement) * 100);
   };
 
   const updateProgressClick = (e) => {
