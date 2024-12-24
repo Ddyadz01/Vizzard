@@ -60,6 +60,9 @@
     {
       "id": 1,
       "artist_name": "Sirius",
+      "artist_firstname": "Оганнес",
+      "artist_lastname": "Галаян",
+      "artist_country": "Армения",
       "artist_image_url": "https://avatars.yandex.net/get-music-content/5708920/a19cc4b1.a.21379052-1/m1000x1000?webp=false",
       "artist_label": "Street Stars",
       "artist_albums": [
@@ -73,6 +76,9 @@
     {
       "id": 2,
       "artist_name": "Zubi",
+      "artist_firstname": "Нзубе",
+      "artist_lastname": "Олисаэбука",
+      "artist_country": "Великобритания",
       "artist_image_url": "https://i.scdn.co/image/ab67616d0000b273e921dfd4f46c2585eca012a3",
       "artist_label": "",
       "artist_albums": [
@@ -86,7 +92,10 @@
     {
       "id": 3,
       "artist_name": "A.V.G.",
-      "artist_image_url": "https://musclub.ru/data/catalog/4/3/f/43f6ec07a1c6a9aa11ed0156f1d598da.jpeg",
+      "artist_firstname": "Валико",
+      "artist_lastname": "Алексанян",
+      "artist_country": "Армения",
+      "artist_image_url": "https://avatars.yandex.net/get-music-content/9837405/4c1892b7.p.3032223/m1000x1000?webp=false",
       "artist_label": "",
       "artist_albums": [
         {
@@ -99,13 +108,23 @@
     {
       "id": 4,
       "artist_name": "Janaga",
+      "artist_firstname": "Геворг",
+      "artist_lastname": "Агаджанян",
+      "artist_country": "Армения",
       "artist_image_url": "https://sun9-71.userapi.com/impg/El2ZS1IjrB8wUQ7-j7SW0E-_dm6UqsE_c20-7A/BQYd55rGaFU.jpg?size=500x500&quality=96&sign=e1280edd0e44d67e3622411842891253&type=album",
       "artist_label": "",
       "artist_albums": [
         {
           "id": 1,
-          "album_name": "2022",
-          "album_image_url": "https://avatars.mds.yandex.net/i?id=2bb3a6e87a13e09c0e7d4b9f6a58e9e1a124f250-4242799-images-thumbs&n=13"
+          "year": "2022",
+          "album_name": "Весна",
+          "album_image_url": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+          "id": 2,
+          "year": "2024",
+          "album_name": "Нутро",
+          "album_image_url": "https://images.unsplash.com/photo-1500964757637-c85e8a162699?q=80&w=2103&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
       ]
     }

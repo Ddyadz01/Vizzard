@@ -1,51 +1,86 @@
-import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
 import { Loader } from '@components/shared/Loader/Loader';
 
-import { useAudioStore } from '@store/store';
-
-import { artists, popular } from '../../data/data.json';
-
 import style from './artist-page.module.scss';
-import SongItem from '../../_components/shared/SongItem/SongItem';
+import SongItem from '@components/shared/SongItem/SongItem';
+import { useArtist } from '@hooks/useArtist';
+import { useState } from 'react';
+import Button from '../../_components/ui/Button/Button';
+import AlbumItem from '../../_components/shared/AlbumItem/AlbumItem';
 import TitleComponent from '../../_components/ui/TitleComponent/TitleComponent';
 
 const ArtistPage = () => {
-  const [artist, setArtist] = useState({});
-  const [artistAudio, setArtistAudio] = useState([]);
-
-  const [isLoading, setLoading] = useState(true);
-
-  const { activeAudio } = useAudioStore((state) => state);
-
+  const [toggleTabs, setToggleTabs] = useState('songs');
   const { id } = useParams();
-
-  useEffect(() => {
-    setArtist(artists.filter((artist) => artist.id == id)[0]);
-    setArtistAudio(popular.filter((audio) => audio.artist_id == id));
-    setLoading(false);
-  }, [id]);
+  const { activeAudio, artist, artistAudio, isLoading } = useArtist(id);
 
   if (isLoading) return <Loader />;
 
   return (
     <div className={style['artist--page']}>
       <div className={style['artist--info']}>
-        <h1>
-          {artist.artist_name}
-          {activeAudio.artist_id == id && (
-            <p style={{ color: 'var(--green-color' }}>Сейчас проигрывается</p>
-          )}
-        </h1>
-        <img src={artist.artist_image_url} alt="" />
+        {activeAudio.artist_id == id && (
+          <p style={{ color: 'var(--green-color' }} className={style['indicator']}>
+            Сейчас проигрывается
+          </p>
+        )}
+        <div className={style['artist--image']}>
+          <div className={style['artist--image_img']}>
+            <h1>{artist.artist_name}</h1>
+            <img src={artist.artist_image_url} alt={artist.artist_name} />
+          </div>
+        </div>
+        <div className={style['artist--info__content']}>
+          <div className={style['list-item']}>
+            <TitleComponent content={'Исполнитель'} size={'s'} />
+            <p>{artist.artist_name}</p>
+          </div>
+          <div className={style['list-item']}>
+            <TitleComponent content={'Имя'} size={'s'} />
+            <p>{artist.artist_firstname}</p>
+          </div>
+          <div className={style['list-item']}>
+            <TitleComponent content={'Фамилия'} size={'s'} />
+            <p>{artist.artist_lastname}</p>
+          </div>
+          <div className={style['list-item']}>
+            <TitleComponent content={'Страна рождения'} size={'s'} />
+            <p>{artist.artist_country}</p>
+          </div>
+        </div>
       </div>
-
-      <div className={style['artist--songs']}>
-        <TitleComponent size={'l'} content={'Artist songs'} />
-        {artistAudio.map((audio) => (
-          <SongItem item={audio} key={audio.id} />
-        ))}
+      <div className={style['artist--content']}>
+        <div className={style['tabs']}>
+          <Button
+            text={'Песни'}
+            isActive={toggleTabs == 'songs' && true}
+            onClickFn={() => setToggleTabs('songs')}
+            size={'l'}
+            type={'default'}
+          />
+          <Button
+            text={'Альбомы'}
+            onClickFn={() => setToggleTabs('albums')}
+            isActive={toggleTabs == 'albums' && true}
+            size={'l'}
+            type={'default'}
+          />
+        </div>
+        {toggleTabs == 'songs' ? (
+          <div className={style['artist--songs']}>
+            {/* <TitleComponent size={'l'} content={'Artist songs'} /> */}
+            {artistAudio.map((audio) => (
+              <SongItem item={audio} key={audio.id} />
+            ))}
+          </div>
+        ) : (
+          <div className={style['artist--albums']}>
+            {artist.artist_albums.map((album) => (
+              <AlbumItem key={album.id} item={album} />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

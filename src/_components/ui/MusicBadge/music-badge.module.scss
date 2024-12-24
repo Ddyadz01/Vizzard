@@ -4,6 +4,8 @@
   display: flex;
   width: 40px;
   align-items: flex-end;
+  justify-content: center;
+
   span {
     display: block;
     border-radius: 8px;
@@ -18,7 +20,7 @@
   }
 }
 
-@for $i from 1 through 5 {
+@for $i from 1 through 4 {
   .player--animate.active > span {
     animation: animation 0.6s infinite backwards;
     &:nth-child(#{$i}) {

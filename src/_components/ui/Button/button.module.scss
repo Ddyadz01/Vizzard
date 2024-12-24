@@ -1,0 +1,25 @@
+button {
+  padding: 15px;
+  // background-color: red;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button.default {
+  border: 1px solid var(--sidebar-background);
+  &:hover {
+    border: 1px solid var(--green-color);
+  }
+}
+
+// button.primary {
+//   &:hover {
+//     background-color: transparent;
+//     border: 2px solid var(--sidebar-background);
+//   }
+// }
+
+button.active {
+  background-color: var(--green-color);
+}
