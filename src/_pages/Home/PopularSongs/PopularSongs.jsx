@@ -7,12 +7,14 @@ import TitleComponent from '../../../_components/ui/TitleComponent/TitleComponen
 
 const PopularSongs = () => {
   return (
-    <div className={style['popular--songs']}>
+    <>
       <TitleComponent content={'Popular Songs'} size={'l'} />
-      {data.popular.map((song) => (
-        <SongItem key={song.id} item={song} />
-      ))}
-    </div>
+      <div className={style['popular--songs']}>
+        {data.popular.map((song) => (
+          <SongItem key={song.id} item={song} />
+        ))}
+      </div>
+    </>
   );
 };
 

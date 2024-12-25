@@ -122,3 +122,28 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .artist--page {
+    flex-direction: column;
+    justify-content: start;
+    .artist--info {
+      width: 100%;
+      &__content {
+        padding: 0 20px;
+        h1 {
+          padding: 0;
+        }
+      }
+    }
+    .artist--content {
+      margin-top: 40px;
+      .artist--albums {
+        justify-content: space-between;
+      }
+      .artist--songs {
+        margin-top: 20px;
+      }
+    }
+  }
+}
