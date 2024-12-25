@@ -80,8 +80,23 @@
         width: 100%;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 1px solid var(--sidebar-background);
         padding: 4px 0;
+        position: relative;
+        &::before {
+          content: '';
+          height: 2px;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          background: rgb(33, 33, 33);
+          background: radial-gradient(
+            circle,
+            rgba(33, 33, 33, 1) 0%,
+            rgba(33, 33, 33, 1) 28%,
+            rgba(33, 33, 33, 0.5102415966386555) 68%,
+            rgba(33, 33, 33, 0.022846638655462215) 100%
+          );
+        }
         h1 {
           margin: 0;
         }

@@ -84,8 +84,15 @@
       "artist_albums": [
         {
           "id": 1,
-          "album_name": "2022",
-          "album_image_url": "https://avatars.mds.yandex.net/i?id=2bb3a6e87a13e09c0e7d4b9f6a58e9e1a124f250-4242799-images-thumbs&n=13"
+          "album_name": "iluminada",
+          "year": 2021,
+          "album_image_url": "https://sun1-86.userapi.com/impf/zKFRwdH1tUPCKZ32Hg7Tl_uAGheFTfDnZ3Am_A/I60W7bcEaYg.jpg?size=300x300&quality=96&sign=5595fb5c425153d6ddb6d9df76a4dfda&type=audio"
+        },
+        {
+          "id": 2,
+          "album_name": "trinity",
+          "year": 2021,
+          "album_image_url": "https://sun9-63.userapi.com/impf/rc6wKnUKAPrDiL6Id1700DzjCpJ2sSdVWe2GGQ/lk4ytoZL51M.jpg?size=300x300&quality=96&sign=dd765f7748889564ad791310d6e60bec&type=audio"
         }
       ]
     },
