@@ -77,7 +77,9 @@ const ArtistPage = () => {
         ) : (
           <div className={style['artist--albums']}>
             {artist.artist_albums.map((album) => (
-              <AlbumItem key={album.id} item={album} />
+              <div key={album.id} className={style['artist--albums_item']}>
+                <AlbumItem item={album} />
+              </div>
             ))}
           </div>
         )}

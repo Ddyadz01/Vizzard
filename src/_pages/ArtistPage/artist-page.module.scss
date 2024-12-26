@@ -119,6 +119,9 @@
     .artist--albums {
       margin-top: 30px;
       display: flex;
+      &_item {
+        margin-right: 30px;
+      }
     }
   }
 }

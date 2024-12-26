@@ -12,10 +12,12 @@ import './App.scss';
 import { useState } from 'react';
 import ArtistPage from './_pages/ArtistPage/ArtistPage';
 import Albums from './_pages/Albums/Albums';
+import AlbumPage from './_pages/AlbumPage/AlbumPage';
 
 function App() {
   const [isDashboard, setDashboard] = useState(false);
   const [isPlayerShow, setPlayerShow] = useState(true);
+
   return (
     <div className="app">
       <Dashboard isDashboard={isDashboard} setDashboard={setDashboard} />
@@ -31,6 +33,7 @@ function App() {
           <Route path="/artists" element={<Artists />} />
           <Route path="/artists/:id" element={<ArtistPage />} />
           <Route exact path="/albums" element={<Albums />} />
+          <Route exact path="/albums/:id" element={<AlbumPage />} />
         </Routes>
         <Player isPlayerShow={isPlayerShow} />
       </div>

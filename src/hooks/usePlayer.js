@@ -7,7 +7,7 @@ export const usePlayer = (audioRef, activeAudio) => {
   const [currentTime, setCurrentTime] = useState(0);
   const [volume, setVolume] = useState(1);
 
-  const { isPlaying, updatePlayingStatus } = useAudioStore((state) => state);
+  const { isPlaying, updatePlayingStatus, isAuth } = useAudioStore((state) => state);
 
   const audio = audioRef?.current;
 
@@ -38,6 +38,17 @@ export const usePlayer = (audioRef, activeAudio) => {
   }, [audio]);
 
   const updateProgress = () => {
+    if (!isAuth) {
+      setDuration('00' + ':30');
+      setProgress((audio.currentTime / 30) * 100);
+      const minutes = Math.floor(audio.currentTime / 60);
+      const seconds = Math.floor(audio.currentTime - minutes * 60);
+      setCurrentTime('0' + minutes + `${seconds < 10 ? ':0' : ':'}` + seconds);
+      if (audio.currentTime >= 30) {
+        audio.currentTime = 0;
+      }
+      return;
+    }
     const currentTime = audio.currentTime;
     const duration = audio.duration;
     if (currentTime == duration) {

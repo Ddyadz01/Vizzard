@@ -5,6 +5,7 @@
       "title": "One Love",
       "artist": "Sirius",
       "label": "Street Stars",
+      "album_id": 10,
       "artist_id": 1,
       "duration": "04:14",
       "audioUrl": "/audio/Sirius-Nostalgia.mp3",
@@ -16,6 +17,7 @@
       "title": "Old School",
       "artist": "Sirius",
       "label": "Street Stars",
+      "album_id": 10,
       "artist_id": 1,
       "duration": "03:45",
       "audioUrl": "/audio/Sirius-Old School.mp3",
@@ -28,6 +30,7 @@
       "artist": "Zubi",
       "label": "",
       "artist_id": 2,
+      "album_id": 11,
       "duration": "02:55",
       "audioUrl": "/audio/Zubi-Sugar.mp3",
       "countAditions": "67K",
@@ -39,6 +42,7 @@
       "artist": "A.V.G.",
       "label": "",
       "artist_id": 3,
+      "album_id": 15,
       "duration": "01:45",
       "audioUrl": "/audio/Биг Сити Лайф.mp3",
       "countAditions": "67K",
@@ -50,6 +54,7 @@
       "artist": "Janaga",
       "label": "",
       "artist_id": 4,
+      "album_id": 20,
       "duration": "02:05",
       "audioUrl": "/audio/JANAGA-Интервью.mp3",
       "countAditions": "67K",
@@ -67,8 +72,9 @@
       "artist_label": "Street Stars",
       "artist_albums": [
         {
-          "id": 1,
+          "id": 10,
           "album_name": "2022",
+          "artist_id": 1,
           "album_image_url": "https://avatars.mds.yandex.net/i?id=2bb3a6e87a13e09c0e7d4b9f6a58e9e1a124f250-4242799-images-thumbs&n=13"
         }
       ]
@@ -83,15 +89,17 @@
       "artist_label": "",
       "artist_albums": [
         {
-          "id": 1,
+          "id": 11,
           "album_name": "iluminada",
           "year": 2021,
+          "artist_id": 2,
           "album_image_url": "https://sun1-86.userapi.com/impf/zKFRwdH1tUPCKZ32Hg7Tl_uAGheFTfDnZ3Am_A/I60W7bcEaYg.jpg?size=300x300&quality=96&sign=5595fb5c425153d6ddb6d9df76a4dfda&type=audio"
         },
         {
-          "id": 2,
+          "id": 12,
           "album_name": "trinity",
           "year": 2021,
+          "artist_id": 2,
           "album_image_url": "https://sun9-63.userapi.com/impf/rc6wKnUKAPrDiL6Id1700DzjCpJ2sSdVWe2GGQ/lk4ytoZL51M.jpg?size=300x300&quality=96&sign=dd765f7748889564ad791310d6e60bec&type=audio"
         }
       ]
@@ -104,13 +112,7 @@
       "artist_country": "Армения",
       "artist_image_url": "https://avatars.yandex.net/get-music-content/9837405/4c1892b7.p.3032223/m1000x1000?webp=false",
       "artist_label": "",
-      "artist_albums": [
-        {
-          "id": 1,
-          "album_name": "2022",
-          "album_image_url": "https://avatars.mds.yandex.net/i?id=2bb3a6e87a13e09c0e7d4b9f6a58e9e1a124f250-4242799-images-thumbs&n=13"
-        }
-      ]
+      "artist_albums": []
     },
     {
       "id": 4,
@@ -122,14 +124,16 @@
       "artist_label": "",
       "artist_albums": [
         {
-          "id": 1,
-          "year": "2022",
+          "id": 18,
+          "year": 2022,
+          "artist_id": 4,
           "album_name": "Весна",
           "album_image_url": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
-          "id": 2,
-          "year": "2024",
+          "id": 20,
+          "year": 2024,
+          "artist_id": 4,
           "album_name": "Нутро",
           "album_image_url": "https://images.unsplash.com/photo-1500964757637-c85e8a162699?q=80&w=2103&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
