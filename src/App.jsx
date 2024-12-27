@@ -13,27 +13,24 @@ import { useState } from 'react';
 import ArtistPage from './_pages/ArtistPage/ArtistPage';
 import Albums from './_pages/Albums/Albums';
 import AlbumPage from './_pages/AlbumPage/AlbumPage';
+import RegisterPage from './_pages/Auth/RegisterPage';
 
 function App() {
-  const [isDashboard, setDashboard] = useState(false);
   const [isPlayerShow, setPlayerShow] = useState(true);
 
   return (
     <div className="app">
-      <Dashboard isDashboard={isDashboard} setDashboard={setDashboard} />
+      <Dashboard />
       <div className="app-element content">
-        <TopNavigation
-          setDashboard={setDashboard}
-          isDashboard={isDashboard}
-          setPlayerShow={setPlayerShow}
-          isPlayerShow={isPlayerShow}
-        />
+        <TopNavigation setPlayerShow={setPlayerShow} isPlayerShow={isPlayerShow} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/artists" element={<Artists />} />
           <Route path="/artists/:id" element={<ArtistPage />} />
           <Route exact path="/albums" element={<Albums />} />
           <Route exact path="/albums/:id" element={<AlbumPage />} />
+          <Route exact path="/register" element={<RegisterPage />} />
+          <Route exact path="/login" element={<h1>Login</h1>} />
         </Routes>
         <Player isPlayerShow={isPlayerShow} />
       </div>

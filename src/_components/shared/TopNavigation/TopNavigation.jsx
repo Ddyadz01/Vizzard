@@ -5,22 +5,17 @@ import { useAudioStore } from '@store/store';
 import { AudioLines, ChevronRight, Search } from 'lucide-react';
 
 import NotificationIcon from '/public/icons/notification.svg?react';
-import ArrowRightIcon from '/public/icons/arrow-circle-right.svg?react';
-import ArrowLeftIcon from '/public/icons/arrow-circle-left.svg?react';
 import useBreadcrumbs from 'use-react-router-breadcrumbs';
 
 import style from './top-navigation.module.scss';
 
-const TopNavigation = ({ isDashboard, setDashboard, setPlayerShow, isPlayerShow }) => {
+const TopNavigation = ({ setPlayerShow, isPlayerShow }) => {
   const breadcrumbs = useBreadcrumbs();
   const { activeAudio } = useAudioStore((state) => state);
 
   return (
     <div className={style['top-navigation']}>
       <div className={style['top-navigation--left']}>
-        <div className={style['menu--btn']} onClick={() => setDashboard((prev) => !prev)}>
-          {isDashboard ? <ArrowLeftIcon /> : <ArrowRightIcon />}
-        </div>
         {activeAudio?.audioUrl ? (
           <div className={style['player--toggle']} onClick={() => setPlayerShow((prev) => !prev)}>
             {isPlayerShow ? <AudioLines stroke="var(--green-color)" /> : <AudioLines />}

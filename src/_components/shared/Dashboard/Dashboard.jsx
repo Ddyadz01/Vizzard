@@ -1,52 +1,62 @@
 import { Link, useLocation } from 'react-router';
 
-import logo from '/images/logo.png';
 import HomeIcon from '/public/icons/home.svg?react';
-import RadioIcon from '/public/icons/radio.svg?react';
 import AlbumsIcon from '/public/icons/albums.svg?react';
 import PodcastIcon from '/public/icons/microphone.svg?react';
+import MusicLogo from '/public/icons/music-dashboard.svg?react';
 import PeopleIcon from '/public/icons/people.svg?react';
 
 import style from './dashboard.module.scss';
+import TitleComponent from './../../ui/TitleComponent/TitleComponent';
+import { ArrowLeftFromLine, ArrowRightFromLine } from 'lucide-react';
+import { useState } from 'react';
 
-const Dashboard = ({ isDashboard }) => {
+const Dashboard = () => {
+  const [isDashboard, setDashboard] = useState(false);
   const { pathname } = useLocation();
   return (
     <div className={`${style['dashboard']} ${isDashboard ? style['active'] : style['dashboard']}`}>
-      <div className={style['dashboard--logo']}>
-        <img src={logo} alt="Logo" />
+      <div className={style['dashboard--header']}>
+        <div className={style['dashboard--logo']}>
+          <TitleComponent content={'RetroSound'} size={'l'} />
+          <MusicLogo />
+        </div>
+        <div className={style['menu--btn']} onClick={() => setDashboard((prev) => !prev)}>
+          {isDashboard ? <ArrowLeftFromLine /> : <ArrowRightFromLine />}
+        </div>
       </div>
+
       <div className={style['dashboard--nav']}>
         <nav>
           <ul>
             <li>
               <Link to="/" className={pathname === '/' ? style['active'] : ''}>
                 <HomeIcon />
-                Home
+                <p> Home</p>
               </Link>
             </li>
             <li>
               <Link to="/artists" className={pathname === '/artists' ? style['active'] : ''}>
                 <PeopleIcon />
-                Artists
-              </Link>
-            </li>
-            <li>
-              <Link>
-                <RadioIcon />
-                Radio
+                <p> Artists</p>
               </Link>
             </li>
             <li>
               <Link to="/albums" className={pathname === '/albums' ? style['active'] : ''}>
                 <AlbumsIcon />
-                Albums
+                <p> Albums</p>
               </Link>
             </li>
             <li>
-              <Link>
+              <Link to="/register" className={pathname === '/register' ? style['active'] : ''}>
                 <PodcastIcon />
-                Podcast
+                <p>Register</p>
+              </Link>
+            </li>
+            <li>
+              <Link to="/login" className={pathname === '/login' ? style['active'] : ''}>
+                <PodcastIcon />
+                <p>Login</p>
               </Link>
             </li>
           </ul>
